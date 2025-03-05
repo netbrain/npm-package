@@ -22,6 +22,9 @@
         
         # Tell npx explicitly where to find node
         export NODE="${pkgs.nodejs}/bin/node"
+
+        # Use bash for shell
+        export SHELL="${pkgs.bash}/bin/bash"
         
         # Use npx to run the package without installing it globally
         exec ${pkgs.nodejs}/bin/npx --node "$NODE" --yes ${packageName}@${version} "$@"
